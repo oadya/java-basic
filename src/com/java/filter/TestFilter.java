@@ -11,10 +11,10 @@ public class TestFilter {
 	
     public static void main(String[] args) {
 
-    	List<String> list = Arrays.asList("spring", "node", "mkyong","java");
+    	List<String> list = Arrays.asList("spring", "node","java");
     	
     List<String> list2 =	list.stream() // transform list to stream
-    	.filter(elt-> !"mkyong".equals(elt)) // all except mkyoung
+    	.filter(elt-> !"spring".equals(elt)) // all except spring
     	.collect(Collectors.toList()); // collect the output and convert the stream to a List
     
     list2.forEach(p->System.out.println(p));
